@@ -57,9 +57,13 @@ $as_config = json_encode( array(
 			<div class="section">
 				<p>Enter the link url for the Instagram photo and your photo will be served to you instantly.</p>
 
+				<div id="ajax-response"></div><!-- #ajax-response -->
+
 				<form method="post" class="download-form">
 					<input type="text" name="link" class="link" placeholder="Paste your Instagram url over here.." />
-					<input type="submit" name="process" class="button" value="Download" />
+					<input type="submit" name="process" class="button" value="Process" />
+
+					<div id="ajax-download"></div><!-- #ajax-downlaod -->
 				</form><!-- .download-form -->
 			</div><!-- .section -->
 		</div><!-- .container-wrapper -->

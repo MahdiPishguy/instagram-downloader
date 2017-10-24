@@ -55,7 +55,7 @@ class Downloader {
 	private function do_checks() {
 
 		// Valid URL
-		if ( filter_var( $this->url, FILTER_VALIDATE_URL === FALSE ) ) {
+		if ( filter_var( $this->url, FILTER_VALIDATE_URL ) === FALSE ) {
 			throw new Exception( 'The link provided does not seem to be a valid one. Kindly check the link and try again.' );
 		}
 
@@ -88,7 +88,7 @@ class Downloader {
 		$regex 	= preg_match( "/display_url\": \"(.*)\", \"display_resources/", $this->html, $data );
 
 		// Checks
-		if ( ! empty( $data ) ) {
+		if ( empty( $data ) ) {
 			throw new Exception( 'Inital step failure. Cannot proceed further as no match could be found for the download link.' );
 		}
 

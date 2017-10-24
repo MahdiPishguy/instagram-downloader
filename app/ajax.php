@@ -27,8 +27,8 @@ if ( isset( $_GET['r'] ) && ! empty( $_GET['r'] ) ) {
 			$url 		= strip_tags( $_POST['url'] );
 
 			// Initialize
-			$tmp 		= new Downloader( $url );
-			$response 	= $tmp->process();
+			$grab 		= new Downloader( $url );
+			$response 	= $grab->process();
 		} else {
 			$response['message'] = 'No URL has been provided. Please provide one to continue further.';
 		}
