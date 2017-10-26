@@ -23,7 +23,7 @@ if ( isset( $_GET['l'] ) ) {
 				if ( strpos( $l, 'instagram' ) !== FALSE ) {
 					header( 'Content-Type: application/octet-stream' );
 					header( 'Content-Transfer-Encoding: Binary' );
-					header( 'Content-Disposition: attachment; filename=\'' . $l . '\'' );
+					header( 'Content-Disposition: attachment; filename=\'' . basename( $l ) . '\'' );
 					readfile( $l );
 				}
 			}

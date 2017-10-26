@@ -51,7 +51,7 @@ $as_config = json_encode( array(
 	<div class="container">
 		<div class="container-wrapper">
 			<header class="header">
-				<h1>Instagram Downloader</h1>
+				<h1><?php echo $config['app']; ?></h1>
 			</header><!-- .header -->
 
 			<div class="section">
